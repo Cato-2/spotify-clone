@@ -1,5 +1,5 @@
 .main_sidebar{
-    width:14.5rem;
+    width:18rem;
     background-color: #000;
     color: #F8F9FA;
 }
@@ -10,10 +10,11 @@
     padding-bottom: 0rem;
 }
 .sidebarOption{
+    padding: 1.5rem;
     padding-top:1rem;
     padding-bottom:1rem;
     flex: 0 1 30px;
-    padding: 1.5rem;
+    
 }
 .item{
     display:flex;
@@ -30,7 +31,10 @@
     align-items: center;
     text-overflow:ellipsis;
     white-space: nowrap;
+}
 
+a{
+    text-decoration: none;
 }
 hr{
     border:0;
@@ -38,8 +42,10 @@ hr{
     padding-top:1rem;
 }
 .main_sidebar .list{
-    max-height: calc(100vh - 22rem);
+    max-height: calc(100vh - 21.3rem);
+    min-height: calc(100vh - 21.3rem);
     overflow-y: hidden;
+    padding-right: 0.85rem;
 }
 .main_sidebar .list::-webkit-scrollbar{
     width: 0.9rem;
@@ -52,10 +58,14 @@ hr{
 }
 .main_sidebar .list:hover{
     overflow-y:scroll;
+    padding:0;
 }
 .itemplaylist{
     padding: 0.4rem;
     padding-left: 2rem;
     font-size: 14px;
+    text-decoration: none;
 }
-
+.item:hover{
+    color: #F8F9FA;
+}

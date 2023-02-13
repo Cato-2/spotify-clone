@@ -29,7 +29,7 @@ function Playlists() {
     
     const { isError, isLoading, data } = useQuery(['playlists'], fetchplaylist, {staleTime: 60000})
 
-
+    
 
     const focusplaylist = (playlist) => {
 
