@@ -4,13 +4,13 @@ import Body from "./home_components/Body";
 import Footer from "./home_components/Footer";
 import "./styles/Home.css";
 
-function Home({ spotify }) {
+function Home() {
 
   return (
     <div className="main">
       <div className="main_">
         <Sidebar /> {/* etiqueta siempre tiene que ir con primera letra mayuscula */}
-        <Body/>
+        <Body />
       </div>
       <Footer/>
     </div>

@@ -4,6 +4,7 @@ import { useQuery } from 'react-query'
 import axios from 'axios'
 import { useUserContext } from "../StateProvider";
 import '../styles/Sidebar.css'
+import { Link } from "react-router-dom";
 
 
 
@@ -17,6 +18,7 @@ function Playlists() {
             }
         })
         const data = response.data;
+        console.log(token)
         console.log("playlist: ", data)
         dispatch({
             type: "SET_PLAYLISTS",
@@ -27,14 +29,10 @@ function Playlists() {
     
     const { isError, isLoading, data } = useQuery(['playlists'], fetchplaylist, {staleTime: 60000})
 
-    if(isLoading){
-        return <div>Loading...</div>
-    }
-    if(isError){
-        return <div>Error</div>
-    }
+
 
     const focusplaylist = (playlist) => {
+
         return () => {
             dispatch({
                 type: "SET_SELECTED",
@@ -45,12 +43,15 @@ function Playlists() {
     
 
     return (
-            <div className="list">
+            <div className="nav list">
                 {data && data.items.map((playlist) => {
                             return(
-                                <div className="itemplaylist item" key={playlist.id} onClick={focusplaylist(playlist)}>
-                                    <p className='theme'>{playlist.name}</p>
-                                </div>
+                                <Link to={`/playlist/${playlist.id}`}>
+                                    <div className="itemplaylist item" key={playlist.id} onClick={focusplaylist(playlist)}>
+                                        <p className='theme'>{playlist.name}</p>
+                                    </div>
+                                </Link>
+
                             )
                         })
                 }

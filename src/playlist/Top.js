@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useUserContext } from "../StateProvider";
 import '../styles/Top.css'
+import { useQuery } from 'react-query'
+import axios from 'axios'
+
 
 function Top() {
-const [ { user, selected} ] = useUserContext();
+const [ { user, selected, token } ] = useUserContext();
+
 
   return (
     <div >

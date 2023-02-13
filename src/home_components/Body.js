@@ -1,23 +1,14 @@
 import React, {useEffect} from 'react'
 import '../styles/Body.css'
 import { useUserContext } from "../StateProvider";
-import Top from './Top';
-import Bottom from './Bottom';
+import Top from '../playlist/Top';
+import Bottom from '../playlist/Bottom';
 
 
 function Body() {
-  const [ {selected} ] = useUserContext();
-
-  useEffect(() => {
-    console.log("body")
-    console.log(selected)
-    console.log("body")
-  }, [selected])
-
   return (
     <div className='main_body'>
-      <Top className="top"/>
-      <Bottom className="bottom"/>
+      <h1>Home</h1>
     </div>
   )
 }
