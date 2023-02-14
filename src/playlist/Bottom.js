@@ -54,7 +54,7 @@ export default function Bottom (){
                 return(
                     <div className='track' key={track.track.id}>
                         <p className='number'>{n}</p>
-                        <img className="album_img" src={track.track.album.images[1].url} alt=""/>
+                        <img className="album_img" src={track.track.album.images[0]?.url} alt=""/>
                         <div className='track_info'>
                             <p className='song'>{track.track.name}</p>
                             <p className='artist'>{track.track.artists.map((artist) => artist.name).join(", ")}</p>
