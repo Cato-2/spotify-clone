@@ -47,70 +47,35 @@ export default function Bottom (){
             <div>
                 <Action/>
             </div>
-            <div className='table'>
-                <div className='col'>
-                    <div className='head'>
-                        <p className='n'>#</p>
-                        <p className='titulo'>TÍTULO</p>
-                        
-                    </div>          
+            <div className="head">
+                <p className="n">#</p>
+                <p className="title col">Título</p>
+                <p className="album col">Álbum</p>
+                <p className="date col">Fecha de adición</p>
+                <p className="time col">Duración</p>
+            </div>
+            <hr/>
+            <div className="tracks">
                 {data && data.items.map((track, n) => {
                     n=n+1;
                     return(
-                        <div className='track' key={track.track.id}>
-                            <p className='number'>{n}</p>
-                            <img className="album_img" src={track.track.album.images[0]?.url} alt=""/>
-                            <div className='track_info'>
-                                <p className='song'>{track.track.name}</p>
-                                <p className='artist'>{track.track.artists.map((artist) => artist.name).join(", ")}</p>
+                        <div className="track" key={n}>
+                            <p className="n">{n}</p>
+                            <div className="info">
+                                <img className="track_img" src={track.track.album.images[0].url} alt=""/>
+                                <div className="track_info">
+                                    <p className="track_name">{track.track.name}</p>
+                                    <p className="track_artist">{track.track.artists[0].name}</p>
+                                </div>  
                             </div>
+                            <p className="album">{track.track.album.name}</p>
+                            <p className="date">{converterdate(track.added_at)}</p>
+                            <p className="time">{converterms(track.track.duration_ms)}</p>
                         </div>
-                        )
-                    })
-                }
-                </div>
-                <div className='col'>
-                    <div className='head'>
-                        <p className=''>ÁLBUM</p>
-                    </div> 
-                    {data && data.items.map((track) => {
-                    return(
-                        <div className='info' key={track.track.id}>
-                            <p className='album'>{track.track.album.name}</p>
-                        </div>
-                        )
-                    })
-                }  
-                </div>
-                <div className='col'>
-                    <div className='head'>
-                        <p className=''>AGREGADO EL</p>
-                    </div>  
-                    {data && data.items.map((track) => {
-                    return(
-                        <div className='info' key={track.track.duration_ms}>
-                            <p className='album'>{converterdate(track.added_at.slice(0, 10))}</p>
-                        </div>
-                        )
-                    })
-                }  
-                </div>
-                <div className='col'>
-                    <p className='head'>
-                        <AccessTimeIcon/>
-                    </p> 
-                    {data && data.items.map((track) => {
-                    return(
-                        <div className='info' key={track.track.duration_ms}>
-                            <p className='album'>{converterms(track.track.duration_ms)}</p>
-                        </div>
-                        )
-                    })
-                }  
-                </div>
-            </div>
+                    )
+                })}
             
-
+            </div>
         </div>
     )
 }
