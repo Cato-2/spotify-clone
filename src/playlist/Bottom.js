@@ -22,6 +22,11 @@ export default function Bottom (){
     }
     const { isError, isLoading, data, mutate, refetch } = useQuery(['tracks'], fetchtracksbyplaylist, {staleTime: 5}) 
 
+
+    useEffect(() => {
+        refetch();
+    }, [id])
+
     const converterms = (ms) => {
         const minutes = Math.floor(ms / 60000);
         const seconds = ((ms % 60000) / 1000).toFixed(0);
