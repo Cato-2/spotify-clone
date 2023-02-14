@@ -54,7 +54,10 @@ function App() {
                           } 
             />
             <Route path="/login" element={<Login />} />
-            <Route path="/playlist/:id" element={<Tracks/>}/>
+            <Route path="/playlist/:id" element={
+                          <ProtectedRoute>
+                            <Tracks />
+                          </ProtectedRoute>} exact/>
           </Routes>
         </Router>
      </QueryClientProvider>

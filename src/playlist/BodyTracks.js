@@ -1,16 +1,13 @@
-import React, { Component, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import React from 'react'
+import Top from './Top'
+import Bottom from './Bottom'
+import '../styles/BodyTracks.css'
 
 export default function BodyTracks (){
-  const { id } = useParams();
-
-  useEffect(() => {
-      console.log(id)
-  }, [id])
-
     return (
         <div className='main_body'>
-            <h1>List of tracks</h1>
+            <Top/>
+            <Bottom/>
         </div>
     )
 }

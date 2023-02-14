@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 function Playlists() {
-    const [{ token}, dispatch] = useUserContext();
+    const [{ token }, dispatch] = useUserContext();
 
     const fetchplaylist = async () => {
         const response = await axios.get('https://api.spotify.com/v1/me/playlists', {
@@ -27,12 +27,9 @@ function Playlists() {
         return data;
     }
     
-    const { isError, isLoading, data } = useQuery(['playlists'], fetchplaylist, {staleTime: 60000})
-
-    
+    const { isError, isLoading, data } = useQuery(['playlists'], fetchplaylist, {staleTime: 60000}) 
 
     const focusplaylist = (playlist) => {
-
         return () => {
             dispatch({
                 type: "SET_SELECTED",
@@ -44,10 +41,11 @@ function Playlists() {
 
     return (
             <div className="nav list">
-                {data && data.items.map((playlist) => {
+                {data && data.items.map((playlist, n) => {
+                            n=n+1;
                             return(
                                 <Link to={`/playlist/${playlist.id}`}>
-                                    <div className="itemplaylist item" key={playlist.id} onClick={focusplaylist(playlist)}>
+                                    <div className="itemplaylist item" key={n} onClick={focusplaylist(playlist)}>
                                         <p className='theme'>{playlist.name}</p>
                                     </div>
                                 </Link>

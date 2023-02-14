@@ -1,12 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
 .main_bottom{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
     background-color: #00000034;
     color: #F8F9FA;
-    max-height: calc(100vh - 30rem);
-    overflow-y: auto;
+    justify-content: space-between;
+}
+.track{
+    display: flex;
+    flex-direction: row;
+    padding:0.7rem;
+    font-family: 'Work Sans', sans-serif;
+}
+.info{
+    padding:0.7rem;
+    padding-left: 0;
+    height: 2.5rem;
+}
+
+.album_img{
+    width:2.5rem;
+    padding-left: 1rem;
+}
+
+.track_info{
+    width:fit-content;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 1rem;
+
+}
+
+.track:hover ~ .info{
+    background-color: #4a4a4a;
+    border-radius: 0.2rem;
+}
+.song{
+    color:white;
+    font-weight: bold;
+}
+.artist{
+    color: grey;
+}
+.number{
+    align-items: center;
+    display: flex;
+    padding-right: 1rem;
+    color:grey;
+}
+hr{
+    border:0;
+    border-bottom: 1px solid rgb(66, 66, 66);
+    padding-top:1rem;
+}
+.head{
+    display:flex;
+    flex-direction: row;
+    height:2rem;
+    border-bottom: 1px solid grey;
+    font-size: 13px;
+}
+.n{
+    padding-left:1rem;
+}
+.titulo{
+    padding-left:1rem;
+    width: 25rem;
+}
+.col{
+    flex-grow: 1;
 }
