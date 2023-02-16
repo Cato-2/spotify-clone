@@ -2,6 +2,11 @@
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(18,18,18);    ;
+    background: linear-gradient(0deg, rgba(18, 18, 18) 10%, rgba(62, 79, 35) 100%);
+    opacity: 60%;
+    padding-left:2rem;
+    padding-right:2rem;
 }
 .left {
     display: flex;

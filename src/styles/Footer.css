@@ -7,3 +7,36 @@
     color: white;
     border-top: 1px solid #282828;
 }
+.current_playing_info{
+    display:flex; 
+    flex-direction: row;
+    padding: 1rem;
+}
+.playing_album{
+    width:3,5rem;
+    height:3.5rem;
+}
+.current_playing_info_text{
+    display:flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    font-size: 13px;
+    justify-content: space-around;
+}
+.current_artist{
+    font-size: 12px;
+    color: #b3b3b3;
+}
+.current_track{
+    font-size: 14px;
+    color: white;
+    font-weight: normal;
+}
+.like2{
+    font-Size:110% !important;
+    align-items: center;
+    height: 100%;
+    padding-top: 0.7rem;
+    padding-left: 0.7rem;
+    color : #b3b3b3;
+}

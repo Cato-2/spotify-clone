@@ -1,33 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .main_bottom{
     display:flex;
     flex-direction: column;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-    background-color: #00000034;
+    background-color: rgba(18,18,18);
     color: #F8F9FA;
     justify-content: space-between;
-}
-.table{
-    display: flex;
-    flex-direction: row;
+
 }
 .track{
     display: flex;
     flex-direction: row;
-    font-family: 'Work Sans', sans-serif;}
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 .info{
-    padding:0.7rem;
     padding-left: 0;
     height: 2.5rem;
 }
 
 .track_img{
-    width:2.5rem;
+    width:2rem;
+    height:2rem;
     padding-left: 1rem;
+    padding-top: 0.3rem;
 }
 
 .track_info{
@@ -38,35 +35,40 @@
     padding-left: 1rem;
 
 }
-
-.track:hover ~ .info{
-    background-color: #4a4a4a;
-    border-radius: 0.2rem;
-}
 .track_name{
     color:white;
-    font-weight: bold;
+    white-space: nowrap;
     text-overflow:ellipsis;
+    overflow:hidden;
+    width: 500px;
+    font-size: 14px;
 }
 .track_artist{
     color: grey;
+    font-size: 13px;
 }
-.number{
+.n{
     align-items: center;
     display: flex;
     color:grey;
+    font-size: 13px;
 }
 hr{
     border:0;
     border-bottom: 1px solid rgb(66, 66, 66);
     padding-top:1rem;
+    margin-left:2rem;
+    margin-right:2rem;
 }
 .head{
     display:flex;
     flex-direction: row;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .n{
     padding-left:1rem;
+    height: auto;
 }
 .info{
     width: 500px;
@@ -74,21 +76,28 @@ hr{
     flex-direction: row;
     white-space: nowrap;
     text-overflow:ellipsis;
-    overflow:hidden
+    overflow:hidden;
 }
 .title{
-    width: 500px;
+    width: 480px;
     white-space: nowrap;
     text-overflow:ellipsis;
-    overflow:hidden
-
+    overflow:hidden;
+    padding-left: 1rem;
+    color:#797b79;
+    font-size: 13px;
 }
 .album{
     width: 500px;
-    padding-left: 2rem;
+    padding-left: 1rem;
     white-space: nowrap;
     text-overflow:ellipsis;
-    overflow:hidden
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    font-size: 13px;
+    color:#797b79;
+    height: auto;
 }
 .date{
     width: 300px;
@@ -96,6 +105,10 @@ hr{
     text-overflow:ellipsis;
     overflow:hidden;
     padding-left: 2rem;
+    display:flex;
+    align-items: center;
+    font-size: 13px;
+    color:#797b79;
 }
 .time{
     width: 100px;
@@ -103,11 +116,18 @@ hr{
     text-overflow:ellipsis;
     overflow:hidden;
     padding-left: 2rem;
+    display:flex;
+    align-items: center;
+    font-size: 13px;
+    color:#797b79;
 }
 .tracks{
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
 }
 .track:hover{
-    background-color: #4a4a4a;
+    background-color: #2b2b29;
     border-radius: 0.2rem;
 }

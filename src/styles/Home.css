@@ -6,6 +6,4 @@
 .main_{
     display:flex;
     flex-direction:row;
-    background-color: rgb(18,18,18);    ;
-    background: linear-gradient(0deg, rgba(18,18,18,1) 35%, rgb(114, 153, 204) 100%);
 }

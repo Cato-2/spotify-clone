@@ -48,11 +48,12 @@ export default function Bottom (){
                 <Action/>
             </div>
             <div className="head">
-                <p className="n">#</p>
-                <p className="title col">Título</p>
-                <p className="album col">Álbum</p>
-                <p className="date col">Fecha de adición</p>
-                <p className="time col">Duración</p>
+                <p className="n t">#</p>
+                <p className="title col">TÍTULO</p>
+                <p className="album col">ÁLBUM</p>
+                <p className="date col">AGREGADO EL</p>
+                <p className="time col"><AccessTimeIcon/></p>
+                
             </div>
             <hr/>
             <div className="tracks">

@@ -8,6 +8,7 @@ export const initialState = {
   selectedTracks: null,
   // remove after developing
   token:null,
+  currentplaying: null,
 };
 
 export const reducer = (state, action) => {
@@ -38,6 +39,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         selected: action.selected, //modifica el estado de selected
+      };
+    case "SET_CURRENT_PLAYING":
+      return {
+        ...state,
+        currentplaying: action.currentplaying, //modifica el estado de currentplaying
       };
     default:
       //si no se cumple ninguna de las anteriores, retorna el estado
