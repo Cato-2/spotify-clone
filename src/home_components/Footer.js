@@ -69,19 +69,19 @@ function Footer() {
       
       <div className='footer_controls'>
         <div className='footer_controls_buttons'>
-          <div className="item"> 
+          <div className="item2"> 
               <ShuffleIcon className="aleatorio"/>
           </div>
-          <div className="item"> 
+          <div className="item2"> 
               <SkipPreviousIcon className="back"/>
           </div>
-          <div className="item" > 
+          <div className="item2" > 
             { state ? <PauseCircleIcon className='play2'/> : <PlayCircleIcon className='play2'/> }
           </div>
-          <div className="item"> 
+          <div className="item2"> 
             <SkipNextIcon className='next'/>
           </div>
-          <div className="item"> 
+          <div className="item2"> 
             <RepeatIcon className='repeat'/>
           </div>
         </div>

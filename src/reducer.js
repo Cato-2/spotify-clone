@@ -6,6 +6,7 @@ export const initialState = {
   item: null,
   selected: null,
   selectedTracks: null,
+  songs:null,
   // remove after developing
   token:null,
   currentplaying: null,

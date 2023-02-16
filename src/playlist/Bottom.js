@@ -8,8 +8,12 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Action from './Action'
 
 export default function Bottom (){
-    const [{ token }, dispatch] = useUserContext();
+    const [{ token}, dispatch] = useUserContext();
     const { id } = useParams();
+
+    useEffect(() => {
+        refetch();
+    }, [id])
 
     const fetchtracksbyplaylist = async () => {
         const response = await axios.get(`https://api.spotify.com/v1/playlists/${id}/tracks`, {
@@ -21,12 +25,26 @@ export default function Bottom (){
         console.log("playlist: ", data)
         return data;
     }
-    const { isError, isLoading, data, mutate, refetch } = useQuery(['tracks'], fetchtracksbyplaylist, {staleTime: 5}) 
+    const { isError, isLoading, data, mutate, refetch, isFetching} = useQuery(['tracks'], fetchtracksbyplaylist, {staleTime: 5}) 
+
+    if(isFetching) return (
+        <div className='main_bottom2'> 
+            <div>
+                <Action/>
+            </div>
+            <div className="head">
+                <p className="n t">#</p>
+                <p className="title col">TÍTULO</p>
+                <p className="album col">ÁLBUM</p>
+                <p className="date col">AGREGADO EL</p>
+                <p className="time col"><AccessTimeIcon/></p>    
+            </div>
+            <div className='loading'>
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+        </div>)
 
 
-    useEffect(() => {
-        refetch();
-    }, [id])
 
     const converterms = (ms) => {
         const minutes = Math.floor(ms / 60000);
