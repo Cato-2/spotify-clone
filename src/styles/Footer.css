@@ -6,6 +6,19 @@
     height: 6.5rem;
     color: white;
     border-top: 1px solid #282828;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    height: fit-content;
+}
+.current_playing{
+    width:30vh;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;   
 }
 .current_playing_info{
     display:flex; 
@@ -36,7 +49,69 @@
     font-Size:110% !important;
     align-items: center;
     height: 100%;
-    padding-top: 0.7rem;
+    padding-top: 1rem;
     padding-left: 0.7rem;
     color : #b3b3b3;
+}
+.footer_controls{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.footer_controls_buttons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;  
+}
+.footer_volume{
+    width:25vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: end;
+    margin-right:2rem;
+}
+.play2{
+    font-Size:240% !important;
+    align-items: center;
+    height: 100%;
+    color:white;
+}
+.item2{
+    padding-left: 0.5rem;
+}
+.back{
+    font-Size:200% !important;
+    align-items: center;
+}
+.next{
+    font-Size:200% !important;
+    align-items: center;
+}
+.aleatorio{
+    font-Size:120% !important;
+    align-items: center;
+}
+.repeat{
+    font-Size:120% !important;
+    align-items: center;
+}
+.queue{
+    font-Size:120% !important;
+    align-items: center;
+    padding-right: 1rem;
+}
+.devices{
+    font-Size:120% !important;
+    align-items: center;
+    padding-right: 1rem;
+}
+.sound{
+    font-Size:120% !important;
+    align-items: center;
+    padding-right: 0.5rem;
+}
+.vol{
+    display:flex;
+    flex-direction: row;
 }
