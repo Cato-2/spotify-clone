@@ -1,9 +1,12 @@
 .main{
     display:flex;
     flex-direction:column;
-    
+    min-width: 60rem;
+    overflow: auto;
 }
 .main_{
     display:flex;
     flex-direction:row;
+    min-width: 60rem;
+    overflow: auto;
 }

@@ -13,10 +13,10 @@ function Sidebar() {
     <div className='main_sidebar'>
       <img className='logoSidebar' src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt=""/>
       <div className='sidebarOption'>
-        <Link to="/" className="item">
+        <div className="item">
           <HomeOutlinedIcon className='icon'/>          
           <h5 className='theme'>Home</h5>
-        </Link>
+        </div>
         <div className="item">
           <SearchOutlinedIcon className='icon'/>
           <h5 className='theme'>Buscar</h5>
