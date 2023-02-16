@@ -1,5 +1,6 @@
 .main_footer{
-    bottom: 0;
+    position:absolute;
+    bottom:0;
     background-color: #181818;
     height: 6.5rem;
     color: white;
@@ -8,6 +9,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width:100%;
+    min-width: 60rem;
+    overflow: hidden;
 }
 .left{
     height: fit-content;
