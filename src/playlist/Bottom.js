@@ -73,7 +73,7 @@ export default function Bottom (){
                 <p className="time col"><AccessTimeIcon/></p>
                 
             </div>
-            <hr/>
+            <hr className='hr2'/>
             <div className="tracks">
                 {data && data.items.map((track, n) => {
                     n=n+1;
@@ -81,7 +81,7 @@ export default function Bottom (){
                         <div className="track" key={n}>
                             <p className="n">{n}</p>
                             <div className="info">
-                                <img className="track_img" src={track.track.album.images[0].url} alt=""/>
+                                {track.track.album.images[0] && <img className="track_img" src={track.track.album.images[0].url} alt=""/>}
                                 <div className="track_info">
                                     <p className="track_name">{track.track.name}</p>
                                     <p className="track_artist">{track.track.artists[0].name}</p>
